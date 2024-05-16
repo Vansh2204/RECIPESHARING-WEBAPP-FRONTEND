@@ -1,14 +1,25 @@
-import React from "react"
+import React, { useEffect, useState } from "react"
 
 export function Content(){
+
+    const [data,setdata] = useState([]);
+
+    useEffect(()=>{
+        fetch("http://localhost:3300/recipes").then((res)=>res.json()).then((res)=>setdata(res))
+    })
     
+    const formattedrecipes = data.map((item)=>{
+        return (
+            <>
+            <h1 >{item.UserName}</h1>
+            </>
+        )
+
+        
+
+    })
+    return formattedrecipes;
 
 
-    return (
-        <>
-        <div class=" col-5 float-left ml-5" style={{height:"100vh",overflow:"hidden"}}>
-        <h1 >Content</h1>
-        </div>
-        </>
-    )
+   
 }

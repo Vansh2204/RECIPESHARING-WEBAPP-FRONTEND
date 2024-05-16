@@ -1,6 +1,9 @@
 import React from 'react';
-import ReactDOM from 'react-dom/client';
 import './index.css';
+
+import ReactDOM from 'react-dom/client';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
+
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 import { Left_Sidebar } from './Components/Left_Sidebar';
@@ -10,10 +13,17 @@ import { Content } from './Components/Content';
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <>
-    <Right_Sidebar/>
+    {/* <Right_Sidebar/>
   <Left_Sidebar/>
-  <Content/>
-  
+  <Content/> */}
+    <BrowserRouter>
+      <Routes>
+        <Route path='/recipes' element={<Content />}></Route>
+
+      </Routes>
+
+    </BrowserRouter>
+
   </>
 
 );
