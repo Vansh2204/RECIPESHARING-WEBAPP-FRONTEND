@@ -9,6 +9,7 @@ import reportWebVitals from './reportWebVitals';
 import { Left_Sidebar } from './Components/Left_Sidebar';
 import { Right_Sidebar } from './Components/Right_Sidebar';
 import { Content } from './Components/Content';
+import { Description } from './Components/Description';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
@@ -19,6 +20,7 @@ root.render(
     <BrowserRouter>
       <Routes>
         <Route path='/recipes' element={<Content />}></Route>
+        <Route path='/recipe/:id' element={<Description/>}></Route>
 
 
       </Routes>
