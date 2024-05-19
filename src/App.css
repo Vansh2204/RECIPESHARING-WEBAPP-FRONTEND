@@ -36,3 +36,61 @@
     transform: rotate(360deg);
   }
 }
+
+
+
+
+@media screen and (min-width:160px) and (max-width:980px) {
+  .elements{
+    width: 96%;
+    float: right;
+    margin: 2%;
+    font-size: 18px;
+
+  }
+ 
+  
+}
+
+@media  screen and (min-width:160px) and (max-width:900px) {
+  .postimage{
+    width: 96%;
+    margin: 2%;
+  }
+  .postbody{
+    width: 100%;
+  }
+  
+}
+
+.content{
+  margin: 2%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  width: fit-content;
+}
+.recipecontent{
+  float: left;
+  display: flex;
+  margin-right: 65%;
+  width: fit-content;
+
+
+}
+
+
+
+@media  screen and (min-width:160px) and (max-width:600px) {
+  .content{
+    width: 96%;
+    margin: 2%;
+  
+  }
+  .recipecontent{
+    width: fit-content;
+  }
+  
+  
+}

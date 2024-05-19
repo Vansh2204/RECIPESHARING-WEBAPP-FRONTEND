@@ -33,13 +33,22 @@ code {
   overflow: auto;
 
 }
-
-.ingredients{
+.elements {
   background-color: rgb(240, 186, 87);
+  float: right;
+  width:48%;
+  margin: 1%;
+  
+}
+.username{
+  float: left;
+  margin-right: 68%;
+  display: flex;
 }
 
-.process{
-  background-color: rgb(240, 186, 87);
+
+.postbody{
+  width:50%;
+  float: left;
 
 }
-

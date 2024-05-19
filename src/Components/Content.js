@@ -14,14 +14,7 @@ export function Content() {
         fetch("http://localhost:3300/recipes").then((res) => res.json()).then((res) => setdata(res))
     })
 
-    const container = {
-        display: 'flex',
-        justifyContent: 'center',
-        alignItems: 'center',
-        position:'relative'
-        
-        
-    }
+
 
 
 
@@ -30,23 +23,23 @@ export function Content() {
         return (
             <>
             <div className="background"></div>
-                <div style={container}>
-                    <div class="card ml-5 mt-3 mb-5" style={{ height: "auto", width: "auto" ,border:"none"}}>
-                        <div class="card-body">
+                    <div class="content card mx-auto">
+                        <div class="username card-body">
                             {/* <img src={item.UserImage} class="card-img-top" alt="..." style={{ borderRadius: 20}} /> */}
                             <p class="card-title float-left">{item.UserName}</p>
                         </div>
-                        <h2 class="card-text ml-3">{item.RecipeName}</h2>
-                        <div class="card-body">
-                            <Link to={"../recipe/" + item._id}>
+                        <h2 class="card-text justify-content-start">{item.RecipeName}</h2>
+                        <div class="recipecontent">
+                        <Link to={"../recipe/" + item._id}>
                             <a class="btn btn-dark mb-3" style={{color:"white"}}>Description...</a>
                             </Link>
                         </div>
+                        {/* <div class="recipebody">
                         <img src={item.RecipeImage} class="card-img-top " alt="..." style={{ height: "55vh", width: "70vh" }} />
+                        </div> */}
 
                     </div>
 
-                </div>
             </>
         )
 
