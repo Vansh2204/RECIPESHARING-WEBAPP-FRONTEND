@@ -3,7 +3,7 @@ import './index.css';
 
 import ReactDOM from 'react-dom/client';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
-
+import { Auth0Provider } from '@auth0/auth0-react';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 import { Left_Sidebar } from './Components/Left_Sidebar';
@@ -13,14 +13,26 @@ import { Description } from './Components/Description';
 import { Homepage } from './Components/Homepage';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
+
+
 root.render(
   <>
     {/* <Right_Sidebar/>
   <Left_Sidebar/>
   <Content/> */}
+   <Auth0Provider
+      domain="dev-bd8wav35g7x84rej.us.auth0.com"
+      clientId="UFNnS5WvcIVdqXYpqTPlBgsb0eiyvpBH"
+      authorizationParams={{
+        redirect_uri: window.location.origin 
+        
+      }}
+
+    >
     <BrowserRouter>
       <Routes>
-        <Route path='/' element={<Homepage/>}></Route>
+      <Route index element={<Homepage />} />
+
         <Route path='/recipes' element={<Content />}></Route>
         <Route path='/recipe/:id' element={<Description/>}></Route>
 
@@ -28,7 +40,7 @@ root.render(
       </Routes>
 
     </BrowserRouter>
-
+    </Auth0Provider>
   </>
 
 );
