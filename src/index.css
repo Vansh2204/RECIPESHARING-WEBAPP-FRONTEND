@@ -18,7 +18,7 @@ code {
 }
 
 .background {
-  background-image: url(background.png);
+  background-color: rgb(25, 85, 25);
   position: fixed;
   background-position: center;
   top: 0;
@@ -27,6 +27,7 @@ code {
   height: 100%;
   z-index: -1;
 }
+
 
 .card {
   position: relative;
@@ -51,4 +52,39 @@ code {
   width:50%;
   float: left;
 
+}
+
+.animated {
+  animation-duration: 5s;
+  animation-fill-mode: both;
+}
+
+.head{
+  
+  font-style: italic;
+  color: white;
+}
+.tag{
+  
+  font-style: oblique;
+  color: rgb(255, 255, 78);
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.fadeIn {
+  animation-name: fadeIn;
+}
+
+
+
+.bounceIn {
+  animation-name: bounceIn;
 }

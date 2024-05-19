@@ -17,10 +17,10 @@ export function Content() {
 
 
 
-
     const formattedrecipes = data.map((item) => {
 
         return (
+            
             <>
             <div className="background"></div>
                     <div class="content card mx-auto">
@@ -34,9 +34,9 @@ export function Content() {
                             <a class="btn btn-dark mb-3" style={{color:"white"}}>Description...</a>
                             </Link>
                         </div>
-                        {/* <div class="recipebody">
+                        <div class="recipebody">
                         <img src={item.RecipeImage} class="card-img-top " alt="..." style={{ height: "55vh", width: "70vh" }} />
-                        </div> */}
+                        </div>
 
                     </div>
 
@@ -47,6 +47,7 @@ export function Content() {
 
     })
     return formattedrecipes;
+  
 
 
 

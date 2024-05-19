@@ -10,6 +10,7 @@ import { Left_Sidebar } from './Components/Left_Sidebar';
 import { Right_Sidebar } from './Components/Right_Sidebar';
 import { Content } from './Components/Content';
 import { Description } from './Components/Description';
+import { Homepage } from './Components/Homepage';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
@@ -19,6 +20,7 @@ root.render(
   <Content/> */}
     <BrowserRouter>
       <Routes>
+        <Route path='/' element={<Homepage/>}></Route>
         <Route path='/recipes' element={<Content />}></Route>
         <Route path='/recipe/:id' element={<Description/>}></Route>
 
