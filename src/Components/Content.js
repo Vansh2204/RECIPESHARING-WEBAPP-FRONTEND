@@ -20,26 +20,36 @@ export function Content() {
     const formattedrecipes = data.map((item) => {
 
         return (
-            
+
             <>
-            <div className="background"></div>
-                    <div class="content card mx-auto">
+
+{/* <div><h1>Content</h1></div> */}
+
+            {/* <div class="card-container container-fluid ">
+                <div class="content mx-auto float-left">
+                    <img src="..." class="card-img-top" alt="..." />
+                    <div class="card-body">
+                        <h5 class="card-title">Card title</h5>
+                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                        <a href="#" class="btn btn-primary">Go somewhere</a>
+                    </div>
+                </div>
+
+
+            
+                </div> */}
+                <div className="background"></div>
+                    <div class="content col-5 card mx-auto">
                         <div class="username card-body">
-                            {/* <img src={item.UserImage} class="card-img-top" alt="..." style={{ borderRadius: 20}} /> */}
                             <p class="card-title float-left">{item.UserName}</p>
                         </div>
                         <h2 class="card-text justify-content-start">{item.RecipeName}</h2>
-                        <div class="recipecontent">
-                        <Link to={"../recipe/" + item._id}>
-                            <a class="btn btn-dark mb-3" style={{color:"white"}}>Description...</a>
-                            </Link>
-                        </div>
+                        
                         <div class="recipebody">
                         <img src={item.RecipeImage} class="card-img-top " alt="..." style={{ height: "55vh", width: "70vh" }} />
                         </div>
 
                     </div>
-
             </>
         )
 
@@ -47,7 +57,7 @@ export function Content() {
 
     })
     return formattedrecipes;
-  
+
 
 
 

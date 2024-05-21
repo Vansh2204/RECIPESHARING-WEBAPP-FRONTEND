@@ -6,6 +6,7 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+
 }
 
 code {
@@ -18,7 +19,8 @@ code {
 }
 
 .background {
-  background-color: rgb(25, 110, 25);
+  /* background-color:#F0E68C; */
+  background-image: url(bg1.jpg);
   position: fixed;
   background-position: center;
   top: 0;

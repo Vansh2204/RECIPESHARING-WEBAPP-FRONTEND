@@ -1,11 +1,24 @@
-import React from "react"
+import React, { useState } from "react"
+import { NavLink } from 'react-router-dom';
+import { Link, Outlet } from "react-router-dom";
+
 
 export function Left_Sidebar() {
+
+
+
     return (
         <>
-            <h1 class="col-3 bg-dark float-left ml-3 mt-3" style={{ height:"90vh"}}>
-               Left Sidebar
-            </h1>
+            <div className="card container-sidebar">
+                <nav>
+                    <ul>
+                        <li>Profile</li>
+                        <li>Settings</li>
+                        <li>logout</li>
+                    </ul>
+                </nav>
+                </div>
+            <Outlet/>
 
         </>
     )

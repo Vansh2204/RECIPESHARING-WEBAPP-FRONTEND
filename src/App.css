@@ -37,6 +37,15 @@
   }
 }
 
+.container-sidebar{
+  position: absolute;
+  display: flex;
+  width: 35vh;
+  height: 90vh;
+  margin-left: 9%;
+}
+
+
 
 
 
@@ -65,12 +74,27 @@
 
 .content{
   margin: 2%;
-  display: flex;
+  /* float: left;
   justify-content: center;
   align-items: center;
   position: relative;
-  width: fit-content;
+  width: fit-content; */
+  /* display: grid;
+  flex-direction: column;
+  align-items: center;
+  grid-template-areas: "Left_Sidebar Content Right_Sidebar ";
+  display: flex; */
+  width: 100%;
+  justify-content: center;
+  border-radius: 8px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  
+
+
 }
+
 .recipecontent{
   float: left;
   display: flex;
@@ -78,6 +102,13 @@
   width: fit-content;
 
 
+}
+
+.homecomponent{
+  display: grid;
+  grid-template-areas: "Left_Sidebar Content Right_Sidebar ";
+  display: flex;
+  column-gap: 25px;
 }
 
 

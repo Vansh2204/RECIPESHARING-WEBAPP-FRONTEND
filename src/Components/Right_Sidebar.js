@@ -1,9 +1,15 @@
 import React from "react"
+import { Link, Outlet } from "react-router-dom";
 
 export function Right_Sidebar(){
     return (
         <>
-        <h1 class="bg-dark float-right col-3 mr-4 mt-3" style={{height:"90vh"}}>Right Sidebar</h1>
+        <div className="card container-rightsidebar  ml-5">
+                <div className="card border border-dark" style={{width:"fit-content"}}>
+                    <h1 class="">Right Sidebar</h1>
+                </div>
+            </div>
+        <Outlet/>
         </>
     )
 }
