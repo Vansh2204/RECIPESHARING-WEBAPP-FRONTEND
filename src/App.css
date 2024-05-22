@@ -107,16 +107,33 @@ ul.sidebar-list li {
   padding: 10px;
   margin-bottom: 5px;
   background-color: #fff;
-  border: 1px solid #ccc;
   border-radius: 4px;
   box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
   transition: background-color 0.3s;
   display: flex;
   flex-direction: column;
-  width: 100%;
-  cursor:pointer
+  cursor:pointer;
 }
-.sidebar-list Link{
+.menuitem{
+  width: 100%;
+  top: 20%;
+  display: flex;
+  position: absolute;
+  float: left;
+  flex-direction: column;
+  
+}
+.menus{
+  font-size: 20px;
+  margin-bottom: 30px;
+  cursor: pointer;
+  
+}
+
+
+
+
+.sidebar-list {
   color: black;
 }
 
@@ -124,6 +141,22 @@ ul.sidebar-list li:hover {
   background-color: rgb(174, 155, 119);
   color: white;
 }
+.logoutbutton:hover{
+  color: black;
+  background-color: rgb(255, 255, 255);
+
+
+}
+.logoutbutton{
+  width: 90%;
+  float: left;
+  border-radius: 10px;
+  transition: background-color 0.3s;
+  position: absolute;
+  bottom: 10px;
+    
+}
+
 
 
 

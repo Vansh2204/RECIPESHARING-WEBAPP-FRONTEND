@@ -36,9 +36,10 @@ root.render(
         <Route path='/' element={<Homepage/>}></Route>
         <Route path='/' element={<Left_Sidebar/>}>
         <Route path='/recipes' element={<Content />}></Route>
-        <Route path='/profile' element={<Profile />}></Route>
         <Route path='/recipe/:id' element={<Description/>}></Route>
         </Route>
+        <Route path='/profile' element={<Profile />}></Route>
+
         
 
       </Routes>
