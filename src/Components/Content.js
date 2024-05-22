@@ -23,9 +23,9 @@ export function Content() {
 
             <>
 
-{/* <div><h1>Content</h1></div> */}
+                {/* <div><h1>Content</h1></div> */}
 
-            {/* <div class="card-container container-fluid ">
+                {/* <div class="card-container container-fluid ">
                 <div class="content mx-auto float-left">
                     <img src="..." class="card-img-top" alt="..." />
                     <div class="card-body">
@@ -38,8 +38,9 @@ export function Content() {
 
             
                 </div> */}
-                <div className="background"></div>
-                    <div class="content col-5 card mx-auto">
+
+
+                    {/* <div class="content card mx-auto">
                         <div class="username card-body">
                             <p class="card-title float-left">{item.UserName}</p>
                         </div>
@@ -49,7 +50,24 @@ export function Content() {
                         <img src={item.RecipeImage} class="card-img-top " alt="..." style={{ height: "55vh", width: "70vh" }} />
                         </div>
 
+                    </div>  */}
+             <div className="background"></div>
+
+                <div class="mb-3 mt-5 mx-auto card content" >
+                    <div class="row">
+                    <div class="col-md-8">
+                            <div class="card-body">
+                                <h5 class="card-title">{item.UserName}</h5>
+                                <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                                <p class="card-text"><small class="text-body-secondary">Last updated 3 mins ago</small></p>
+                            </div>
+                        </div>
+                        <div class="recipecontent col-4">
+                            <img src={item.RecipeImage} class="float-right img-fluid " alt="..."/>
+                        </div>
+                        
                     </div>
+                </div>
             </>
         )
 

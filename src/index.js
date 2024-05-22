@@ -11,7 +11,6 @@ import { Right_Sidebar } from './Components/Right_Sidebar';
 import { Content } from './Components/Content';
 import { Description } from './Components/Description';
 import { Homepage } from './Components/Homepage';
-import { Home } from './Components/Home';
 import { Profile } from './Components/Profile';
 import { Header } from './Components/Header';
 const root = ReactDOM.createRoot(document.getElementById('root'));
@@ -22,7 +21,7 @@ root.render(
     {/* <Right_Sidebar/>
   <Left_Sidebar/>
   <Content/> */}
-   {/* <Auth0Provider
+   <Auth0Provider
       domain="dev-bd8wav35g7x84rej.us.auth0.com"
       clientId="UFNnS5WvcIVdqXYpqTPlBgsb0eiyvpBH"
       authorizationParams={{
@@ -30,12 +29,11 @@ root.render(
         
       }}
 
-    > */}
+    >
     <BrowserRouter>
     {/* <Left_Sidebar> */}
       <Routes>
-      
-        {/* <Route path='/' element={<Homepage/>}></Route> */}
+        <Route path='/' element={<Homepage/>}></Route>
         <Route path='/' element={<Left_Sidebar/>}>
         <Route path='/recipes' element={<Content />}></Route>
         <Route path='/profile' element={<Profile />}></Route>
@@ -46,7 +44,7 @@ root.render(
       </Routes>
 {/* </Left_Sidebar> */}
     </BrowserRouter>
-    {/* </Auth0Provider> */}
+    </Auth0Provider>
   </>
 
 );
