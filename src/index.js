@@ -13,6 +13,8 @@ import { Description } from './Components/Description';
 import { Homepage } from './Components/Homepage';
 import { Profile } from './Components/Profile';
 import { Header } from './Components/Header';
+import { Categories } from './Components/Categories';
+import { Postbutton } from './Components/Postbutton';
 const root = ReactDOM.createRoot(document.getElementById('root'));
 
 
@@ -30,6 +32,7 @@ root.render(
       }}
 
     >
+      <Postbutton/>
     <BrowserRouter>
     {/* <Left_Sidebar> */}
       <Routes>
@@ -39,6 +42,7 @@ root.render(
         <Route path='/recipe/:id' element={<Description/>}></Route>
         </Route>
         <Route path='/profile' element={<Profile />}></Route>
+        <Route path='/categories' element={<Categories/>}></Route>
 
         
 

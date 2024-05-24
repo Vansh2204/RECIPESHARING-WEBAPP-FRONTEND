@@ -1,5 +1,8 @@
 
 export function Navbar(){
-    return 
+    return (
+        <>
+        </>
+    )
 
 }

@@ -66,6 +66,38 @@ code {
   font-style: italic;
   color: green;
 }
+
+
+@media screen and (min-width:160px) and (max-width:600px) {
+  .subhead {
+    justify-content: center;
+    margin: 2%;
+
+  }
+  .head{
+    justify-content: center;
+  }
+  .animation-text{
+    margin-top: 10%;
+    margin-left: 30px;
+    position: fixed;
+    width: 60%;
+  }
+
+}
+
+/* @media screen and (min-width:160px) and (max-width:1072px) {
+ 
+ .animation-text{
+    position: absolute;
+    width: 60%;
+  }
+
+} */
+
+
+
+
 .tag{
   
   font-style: oblique;
@@ -100,9 +132,9 @@ code {
   overflow: hidden;
   border-radius: 20px;
   margin-left: 14%;
-  width: 15%;
+  width: 14%;
   color: rgb(255, 255, 255);
-  position: absolute;
+  position: fixed;
   
 
 
@@ -147,4 +179,63 @@ code {
   100%{
     margin-top: 0;
   }
+}
+
+.postbutton{
+  position: fixed;
+  bottom: 2%;
+  right: 20%;
+  height: 9%;
+  width: 9%;
+  color: rgb(59, 73, 73);
+  
+}
+.postmodal{
+  position: fixed;
+  inset: 0;
+  opacity: 30;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1;
+  backdrop-filter: blur(10px);
+  width: 100%;
+  height: 100%;
+
+ 
+}
+.closemodal{
+  height: 7vh;
+  width: 7vh;
+  float: inline-end;
+
+}
+.recipe-name{
+  width: 300px;
+  padding: 10px;
+  font-size: 1em;
+  border: 2px solid #ccc;
+  border-radius: 5px;
+  outline: none;
+  transition: border-color 0.3s;
+}
+.imagecontainer img {
+  max-width:  100%;
+  height: auto;
+  border-radius: 5px;
+  margin-top: 20px;
+}
+.recipeimage{
+  display: none;
+}
+.ing-textarea{
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+}
+.process-textarea{
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+
 }

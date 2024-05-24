@@ -18,12 +18,13 @@ export function Left_Sidebar() {
         <>
             <div className="card container-sidebar col-6">
                 <div class="row ml-4 ">
-                    <img class="mr-2 mt-3 " src={user.picture} style={{width:"30px",height:"30px",borderRadius:"20px"}}/>
-                    <h3 class="mt-3" style={{fontSize:"20px"}}>{user.name}</h3>
+                    {/* <img class="mr-2 mt-3 " src={user.picture} style={{width:"30px",height:"30px",borderRadius:"20px"}}/>
+                    <h3 class="mt-3" style={{fontSize:"20px"}}>{user.name}</h3> */}
+                    {console.log(user)}
                 </div>
                 <div class="menuitem">
                     <a class="menus"><Link to={'/profile'} style={{color:"black",textDecoration:"none"}}>Profile</Link></a>
-                    <a class="menus">Categories</a>
+                    <a class="menus"><Link to={'/categories'} style={{color:"black" , textDecoration:"none"}}>Categories</Link></a>
                     <a class="menus">Search</a>
                     <a class="menus">Feedback</a>
 
