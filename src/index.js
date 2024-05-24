@@ -32,13 +32,15 @@ root.render(
       }}
 
     >
-      <Postbutton/>
     <BrowserRouter>
     {/* <Left_Sidebar> */}
       <Routes>
         <Route path='/' element={<Homepage/>}></Route>
         <Route path='/' element={<Left_Sidebar/>}>
+        <Route path='/recipes' element={<Postbutton/>}>
+
         <Route path='/recipes' element={<Content />}></Route>
+        </Route>
         <Route path='/recipe/:id' element={<Description/>}></Route>
         </Route>
         <Route path='/profile' element={<Profile />}></Route>

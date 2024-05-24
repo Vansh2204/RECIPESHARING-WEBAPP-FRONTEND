@@ -25,8 +25,8 @@ export function Profile() {
                         {/* <img class="mt-3" src={user.picture} style={{ borderRadius: "30px", width: "60px", height: "60px" }} /> */}
                         {/* <h2 class="ml-2" style={{ fontSize: "25px", marginTop: "4vh" }}>{user.name}</h2> */}
                         <div class="row" style={{ marginTop: '13vh' }}>
-                            <button class="btn btn-dark mr-4" onClick={profiletoast} style={{ display: "flex", height: "35px", width: "15vh", justifyContent: "center", position: 'absolute', left: "12vh" }}>Edit Profile</button>
-                            <button class="btn btn-dark ml-3" onClick={messagetoast} style={{ display: "flex", height: "35px", width: "15vh", justifyContent: "center" }}>Message</button>
+                            <button class="btn btn-dark ml-5" onClick={profiletoast} style={{ display: "flex", height: "35px", width: "15vh", justifyContent: "center", position: 'absolute', left: "12vh" }}>Edit Profile</button>
+                            <button class="btn btn-dark " onClick={messagetoast} style={{ display: "flex", height: "35px", width: "15vh", justifyContent: "center" }}>Message</button>
                             <ToastContainer theme="dark" position="top-center" />
                         </div>
 
