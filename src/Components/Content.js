@@ -4,10 +4,13 @@ import { Right_Sidebar } from "./Right_Sidebar";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faThumbsUp } from '@fortawesome/free-solid-svg-icons';
 import { Link } from "react-router-dom";
+import { useAuth0 } from "@auth0/auth0-react";
+
 // import { Right_Sidebar } from './Components/Right_Sidebar';
 export function Content() {
 
     const [data, setdata] = useState([]);
+    const {user} = useAuth0();
 
 
     useEffect(() => {
@@ -57,12 +60,10 @@ export function Content() {
                     <div class="row">
                     <div class="col-md-5">
                             <div class="card-body">
-                                <h5 class="card-title">{item.UserName}</h5>
-                                <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-                                <p class="card-text"><small class="text-body-secondary">Last updated 3 mins ago</small></p>
+                             {/* <img class="float-left mr-3" src={user.picture} style={{width:"30px",height:"30px",borderRadius:"20px"}}/>
+                    <h3 class=" float-left" style={{fontSize:"20px",display:'flex'}}>{user.name}</h3>  */}
                             </div>
                         </div>
-                        
                         <div class="recipecontent col-6">
                             <img src={item.RecipeImage} class=" img-fluid " alt="..."/>
                         </div>
