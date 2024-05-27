@@ -30,28 +30,42 @@ code {
   z-index: -1;
 }
 
+.homepagebackground {
+  background-image: url(homepagebg.png);
+  position: fixed;
+  background-position: center;
+  z-index: -1;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+
+}
+
 
 .card {
   position: relative;
-  
+
 
 }
+
 .elements {
   background-color: rgb(240, 186, 87);
   float: right;
-  width:48%;
+  width: 48%;
   margin: 1%;
-  
+
 }
-.username{
+
+.username {
   float: left;
   margin-right: 68%;
   display: flex;
 }
 
 
-.postbody{
-  width:50%;
+.postbody {
+  width: 50%;
   float: left;
 
 }
@@ -61,10 +75,25 @@ code {
   animation-fill-mode: both;
 }
 
-.head{
-  
-  font-style: italic;
-  color: green;
+.head {
+  font-weight: bold;
+  font-size: 65px;
+  color: rgb(4, 95, 4);
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: 25%;
+  left: 30%;
+
+}
+
+.subhead {
+  position: absolute;
+  font-weight: bold;
+  top: 35%;
+  left: 26%;
+  font-size: 68px;
+  color: rgb(4, 95, 4);
 }
 
 
@@ -74,10 +103,12 @@ code {
     margin: 2%;
 
   }
-  .head{
+
+  .head {
     justify-content: center;
   }
-  .animation-text{
+
+  .animation-text {
     margin-top: 10%;
     margin-left: 30px;
     position: fixed;
@@ -86,111 +117,109 @@ code {
 
 }
 
-/* @media screen and (min-width:160px) and (max-width:1072px) {
- 
- .animation-text{
+@media screen and (min-width:160px) and (max-width:1072px) {
+
+  .animation-text {
     position: absolute;
     width: 60%;
   }
 
-} */
-
-
-
-
-.tag{
-  
-  font-style: oblique;
-  
 }
 
-@keyframes fadeIn {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
-}
-
-.fadeIn {
-  animation-name: fadeIn;
-}
-
-
-
-.bounceIn {
-  animation-name: bounceIn;
-}
-
-.animation-text{
-  color: white;
+.animation-text {
+  /* color: white;
   top: 47%;
-  background-color: rgb(62, 136, 66);
-  transform: translate(-50%,-50%);
-  height: 50px;
-  overflow: hidden;
+  height: 70px;
   border-radius: 20px;
   margin-left: 14%;
-  width: 14%;
+  width: 20%;
   color: rgb(255, 255, 255);
-  position: fixed;
-  
+  text-transform: uppercase; */
+  overflow: hidden;
+  height: 90px;
+  position: absolute;
+  top: 50%;
+  left: 40%;
+
 
 
 }
-.loginhomepage{
-  margin-right: 30%;
-  
-}
 
-.line{
-  text-transform: uppercase;
+.animation-text div {
+  color: #fff;
+  height: 90px;
+  margin-bottom: 10px;
+  padding: 2px 15px;
   text-align: center;
-  font-size: 25px;
-  font-weight: bold;
-  line-height: 60px;
+  box-sizing: border-box;
+  width: 100%;
 }
 
-.line:first-child{
-  animation: anim 12s infinite;
-
+.animation-text1 {
+  background: rgb(24, 63, 109);
+  animation: animate 5s linear infinite;
+  border-radius: 10px;
+  width: 100%;
+  font-size: 50px;
 }
 
-@keyframes anim{
-  0%{
-    margin-top: 0;
+.animation-text2 {
+  background: rgb(84, 26, 26);
+  border-radius: 10px;
+  width: 100%;
+  font-size: 50px;
+}
+
+.animation-text3 {
+  background: rgb(88, 2, 88);
+  border-radius: 10px;
+  width: 100%;
+  font-size: 50px;
+}
+
+
+
+@keyframes animate {
+  0% {
+    margin-top: -300px;
   }
-  16%{
-    margin-top: -60px;
+
+  5% {
+    margin-top: -200px;
   }
-  33%{
-    margin-top: -120px;
+
+  33% {
+    margin-top: -200px;
   }
-  50%{
-    margin-top: -180px;
+
+  38% {
+    margin-top: -100px;
   }
-  66%{
-    margin-top: -120px;
+
+  66% {
+    margin-top: -100px;
   }
-  82%{
-    margin-top: -60px;
+
+  71% {
+    margin-top: 0px;
   }
-  100%{
-    margin-top: 0;
+
+  100% {
+    margin-top: 0px;
   }
 }
 
-.postbutton{
+.postbutton {
   position: fixed;
   bottom: 2%;
   right: 20%;
   height: 9%;
   width: 9%;
   color: rgb(59, 73, 73);
-  
+
 }
-.postmodal{
+
+.postmodal {
   position: fixed;
   inset: 0;
   opacity: 30;
@@ -202,15 +231,17 @@ code {
   width: 100%;
   height: 100%;
 
- 
+
 }
-.closemodal{
+
+.closemodal {
   height: 7vh;
   width: 7vh;
   float: inline-end;
 
 }
-.recipe-name{
+
+.recipe-name {
   width: 300px;
   padding: 10px;
   font-size: 1em;
@@ -219,23 +250,106 @@ code {
   outline: none;
   transition: border-color 0.3s;
 }
+
 .imagecontainer img {
-  max-width:  100%;
+  max-width: 100%;
   height: auto;
   border-radius: 5px;
   margin-top: 20px;
 }
-.recipeimage{
+
+.recipeimage {
   display: none;
 }
-.ing-textarea{
+
+.ing-textarea {
   width: 100%;
   height: auto;
   border-radius: 10px;
 }
-.process-textarea{
+
+.process-textarea {
   width: 100%;
   height: auto;
   border-radius: 10px;
 
+}
+
+.main-item {
+  padding: 10px;
+  background-color: #fff;
+  width: 700px;
+}
+
+.background-masker {
+  background-color: #fff;
+  position: absolute;
+}
+
+
+
+@keyframes skeletonanimation {
+  0% {
+    background-position: -800px 0
+  }
+
+  100% {
+    background-position: 800px 0
+  }
+}
+
+.animated-background {
+  position: absolute;
+  display: flex;
+  width: 35vh;
+  height: 90vh;
+  margin-left: 9%;
+  margin-top: 4%;
+  border-radius: 10px;
+  animation-duration: 2s;
+  animation-fill-mode: forwards;
+  animation-iteration-count: infinite;
+  animation-name: skeletonanimation;
+  animation-timing-function: linear;
+  background-color: #f6f7f8;
+  background: linear-gradient(to right, #eeeeee 8%, #bbbbbb 18%, #eeeeee 33%);
+  background-size: 800px 104px;
+}
+
+
+
+.maincard {
+  margin-top: 4%;
+  margin-left: 29%;
+  border-radius: 10px;
+  animation-duration: 2s;
+  animation-fill-mode: forwards;
+  animation-iteration-count: infinite;
+  animation-name: skeletonanimation2;
+  animation-timing-function: linear;
+  background-color: #f6f7f8;
+  background: linear-gradient(to right, #eeeeee 8%, #bbbbbb 18%, #eeeeee 33%);
+  background-size: 800px 104px;
+  position: absolute;
+  display: flex;
+
+}
+
+@keyframes skeletonanimation2 {
+  0% {
+    background-position: -800px 0
+  }
+
+  100% {
+    background-position: 800px 0
+  }
+}
+
+.sub-card {
+  width: 90vh;
+  height: 50vh;
+}
+
+.pure-background {
+  background-color: #eee;
 }

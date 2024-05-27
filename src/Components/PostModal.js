@@ -38,6 +38,7 @@ export function PostModal({ props }) {
                             <div class="col-6 float-right">
                             <textarea rows={5} class="ing-textarea" placeholder="List Ingredients"/>
                             <textarea rows={10} class="process-textarea" placeholder="Recipe Process"/>
+                            <button class="btn btn-dark float-right">Post</button>
 
 
 

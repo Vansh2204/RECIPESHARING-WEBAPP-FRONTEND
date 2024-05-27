@@ -6,11 +6,12 @@ import { faThumbsUp } from '@fortawesome/free-solid-svg-icons';
 import { Link } from "react-router-dom";
 import { useAuth0 } from "@auth0/auth0-react";
 
+
 // import { Right_Sidebar } from './Components/Right_Sidebar';
 export function Content() {
 
     const [data, setdata] = useState([]);
-    const {user} = useAuth0();
+    const { user } = useAuth0();
 
 
     useEffect(() => {
@@ -43,7 +44,7 @@ export function Content() {
                 </div> */}
 
 
-                    {/* <div class="content card mx-auto">
+                {/* <div class="content card mx-auto">
                         <div class="username card-body">
                             <p class="card-title float-left">{item.UserName}</p>
                         </div>
@@ -54,21 +55,21 @@ export function Content() {
                         </div>
 
                     </div>  */}
-             <div className="background"></div>
+                <div className="background"></div>
 
                 <div class="mb-3 mt-5 mx-auto card content" >
                     <div class="row">
-                    <div class="col-md-5">
+                        <div class="col-md-5">
                             <div class="card-body">
-                             {/* <img class="float-left mr-3" src={user.picture} style={{width:"30px",height:"30px",borderRadius:"20px"}}/>
-                    <h3 class=" float-left" style={{fontSize:"20px",display:'flex'}}>{user.name}</h3>  */}
+                                <img class="float-left mr-3" src={user.picture} style={{ width: "30px", height: "30px", borderRadius: "20px" }} />
+                                <h3 class=" float-left" style={{ fontSize: "20px", display: 'flex' }}>{user.name}</h3>
                             </div>
                         </div>
                         <div class="recipecontent col-6">
-                            <img src={item.RecipeImage} class=" img-fluid " alt="..."/>
+                            <img src={item.RecipeImage} class=" img-fluid " alt="..." />
                         </div>
-                        
-                        
+
+
                     </div>
                 </div>
             </>

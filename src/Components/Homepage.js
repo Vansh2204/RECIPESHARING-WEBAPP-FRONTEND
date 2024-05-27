@@ -17,21 +17,19 @@ export function Homepage() {
 
     return (
         <>
-            <div className="background"></div>
+            <div className="homepagebackground"></div>
             <div className="d-flex vh-100 ml-5 align-items-center" style={{ overflow: "auto" }}>
                 <div className="text-center">
-                    <h2 class="head card-text">Discover and Share Amazing Recipes</h2>
-                    <h2 class="subhead" style={{ display: "flex", fontSize: "45px" }}>Join</h2>
+                    <h1 class="head card-text text-center">Discover and Share </h1>
+                    <h2 class="subhead">Amazing Recipes With</h2>
                     <div class="animation-text">
-                        <div class="line">Community</div>
-                        <div class="line">Cooks</div>
-                        <div class="line">Cuisines</div>
+                        <div class="animation-text1">Communities</div>
+                        <div class="animation-text2">Cooks</div>
+                        <div class="animation-text3">Culinaries</div>
+
                     </div>
-                    <div class="loginhomepage">
-                        {/* <button class="btn btn-success"onClick={hadlelogin}>Login or Signup</button> */}
-                        {isAuthenticated ? (
-                            navigate('/recipes')) : (<button className="btn btn-success mt-5 btn-lg mx-2 animated bounceIn" onClick={async (e) => await loginWithRedirect()}>Login or SignUp</button>)}
-                    </div>
+                   
+                
                     
 
                 </div>
