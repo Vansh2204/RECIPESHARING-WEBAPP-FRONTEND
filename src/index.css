@@ -87,44 +87,83 @@ code {
 
 }
 
-.subhead {
-  position: absolute;
-  font-weight: bold;
-  top: 35%;
-  left: 26%;
-  font-size: 68px;
-  color: rgb(4, 95, 4);
-}
 
 
-@media screen and (min-width:160px) and (max-width:600px) {
-  .subhead {
-    justify-content: center;
-    margin: 2%;
 
-  }
-
+@media screen and (max-width:1072px) {
+  
   .head {
     justify-content: center;
-  }
-
-  .animation-text {
-    margin-top: 10%;
-    margin-left: 30px;
+    align-items: center;
+    font-size: 5vw;
+    left: 25%;
+    place-items: center;
     position: fixed;
-    width: 60%;
+  }
+  .animation-text .animation-text div .animation-text1 .animation-text2 .animation-text3 {
+    left: 20%;
   }
 
 }
 
-@media screen and (min-width:160px) and (max-width:1072px) {
-
-  .animation-text {
-    position: absolute;
-    width: 60%;
+@media screen and (max-width:730px) {
+  
+  .head {
+    justify-content: center;
+    align-items: center;
+    font-size: 7vw;
+    left: 15%;
+    place-items: center;
+    position: fixed;
   }
 
 }
+@media screen and (max-width:545px) {
+  
+  .head {
+    justify-content: center;
+    align-items: center;
+    font-size: 8vw;
+    left: 10%;
+    place-items: center;
+    position: fixed;
+  }
+  
+
+}
+@media screen and (max-width:450px) {
+  
+  .head {
+    justify-content: center;
+    align-items: center;
+    font-size: 10vw;
+    left: 10%;
+    place-items: center;
+    position: fixed;
+  }
+
+}
+@media screen and (max-width:320px) {
+  
+  .head {
+    justify-content: center;
+    align-items: center;
+    font-size: 10vw;
+    left: 10%;
+    place-items: center;
+    position: fixed;
+  }
+
+}
+
+@media screen and (min-width:160px) and (max-width:545px) {
+  .navbar{
+    width: 100%;
+    position: fixed;
+  }
+}
+
+
 
 .animation-text {
   /* color: white;

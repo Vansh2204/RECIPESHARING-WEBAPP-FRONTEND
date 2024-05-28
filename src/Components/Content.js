@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react"
 import { Left_Sidebar } from './Left_Sidebar';
 import { Right_Sidebar } from "./Right_Sidebar";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faThumbsUp } from '@fortawesome/free-solid-svg-icons';
+import { faBookBookmark, faBookmark, faComment, faSave, faThumbsUp } from '@fortawesome/free-solid-svg-icons';
 import { Link } from "react-router-dom";
 import { useAuth0 } from "@auth0/auth0-react";
 
@@ -11,11 +11,11 @@ import { useAuth0 } from "@auth0/auth0-react";
 export function Content() {
 
     const [data, setdata] = useState([]);
-    const { user , getIdTokenClaims} = useAuth0();
+    const { user, getIdTokenClaims } = useAuth0();
 
     useEffect(() => {
         fetch("http://localhost:3300/posts").then((res) => res.json()).then((res) => setdata(res))
-        
+
     })
 
 
@@ -59,14 +59,14 @@ export function Content() {
 
                     </div>  */}
 
-                <div class="mb-3 mt-5 mx-auto card content" >
+                {/* <div class="mb-3 mt-5 mx-auto card content" >
                     <div class="row">
                         <div class="col-md-5">
                             <div class="card-body">
-                             {/* <img class="float-left mr-3" src={userclaim.picture} style={{ width: "30px", height: "30px", borderRadius: "20px" }} />
-                                <h3 class=" float-left" style={{ fontSize: "20px", display: 'flex' }}>{userclaim.name}</h3>  */}
+                             <img class="float-left mr-3" src={item.userinfo?.picture} style={{ width: "30px", height: "30px", borderRadius: "20px" }} />
+                                <h3 class=" float-left" style={{ fontSize: "20px", display: 'flex' }}>{item.userinfo?.username}</h3> 
                                 <div>
-                                    <h1>{item.UserName}</h1>
+                                
                                     <h3>{item.RecipeName}</h3>
                                     <p>{item.RecipeProcess}</p>
                                 </div>
@@ -79,6 +79,27 @@ export function Content() {
 
 
                     </div>
+                </div> */}
+
+                <div class="card content">
+                    <div class="card-header">
+                    <img class="float-left mr-3" src={item.userinfo?.picture} style={{ width: "20px", height: "20px", borderRadius: "20px" }} />
+                    <h3 class=" float-left" style={{ fontSize: "15px", display: 'flex' }}>{item.userinfo?.username}</h3> 
+                    </div>
+                    <div class="recipecontent">
+                        <h4>{item.RecipeName}</h4>
+                    </div>
+                    <div class="card-footer" style={{position:"absolute",bottom:"0",width:'100%'}}>
+                        <div class="row">
+                            <FontAwesomeIcon icon={faThumbsUp} style={{marginLeft:"3%",height:"22px"}}/>
+                            <FontAwesomeIcon icon={faComment} style={{marginLeft:"3%",height:"22px"}}/>
+                            <FontAwesomeIcon icon={faBookmark} style={{marginLeft:"3%",height:"22px",position:"absolute",right:"20"}}/>
+
+
+                        </div>
+
+                    </div>
+                    
                 </div>
             </>
         )

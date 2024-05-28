@@ -13,16 +13,42 @@ export function PostModal({ props }) {
     const {getIdTokenClaims} = useAuth0();
 
 
-    function createpost(){
-        fetch("http://localhost:3300/posts",{
+    // function createpost(){
+    //     fetch("http://localhost:3300/posts",{
+    //         method:"POST",
+    //         body:JSON.stringify(post),
+    //         headers:{"Content-Type":"application/json"},
+    //     }).then((res)=>{
+    //         return res.json()
+    //     }).then(()=>{
+    //         navigate('/recipes')
+    //     })
+    // }
+    const createpost = async ()=>{
+        const claims = await getIdTokenClaims();
+        if (!claims) {
+            console.error("Claims Failed !!!!");
+            return;
+          }
+        const userinfo={
+            username:claims.name,
+            picture:claims.picture,
+        };
+
+        const postuserinfo = {...post,userinfo};
+
+        const response = await fetch("http://localhost:3300/posts",{
             method:"POST",
-            body:JSON.stringify(post),
+            body:JSON.stringify(postuserinfo),
             headers:{"Content-Type":"application/json"},
-        }).then((res)=>{
-            return res.json()
-        }).then(()=>{
+        });
+
+        if(response.ok){
             navigate('/recipes')
-        })
+        }else{
+            console.log("Failed to Post")
+        }
+
     }
 
 

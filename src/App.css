@@ -76,9 +76,11 @@
 }
 
 .content{
-  width: 90vh;
-  margin-left: 100px;
+  width: 100vh;
+  margin-left: 20%;
   height: 50vh;
+  border-radius: 10px;
+  top: 10px;
 }
 
 
@@ -87,7 +89,7 @@
   display: flex;
   float: right;
   height: 50vh;
-  margin-left: 8.3%;
+  margin-left: 2%;
 }
 
 .homecomponent {

@@ -20,8 +20,7 @@ export function Homepage() {
             <div className="homepagebackground"></div>
             <div className="d-flex vh-100 ml-5 align-items-center" style={{ overflow: "auto" }}>
                 <div className="text-center">
-                    <h1 class="head card-text text-center">Discover and Share </h1>
-                    <h2 class="subhead">Amazing Recipes With</h2>
+                    <h1 class="head card-text text-center">Discover and Share <br/>Amazing Recipes With</h1>
                     <div class="animation-text">
                         <div class="animation-text3">Culinaries</div>
                         <div class="animation-text2">Cooks</div>
