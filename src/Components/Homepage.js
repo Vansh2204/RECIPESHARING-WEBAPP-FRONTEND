@@ -23,9 +23,9 @@ export function Homepage() {
                     <h1 class="head card-text text-center">Discover and Share </h1>
                     <h2 class="subhead">Amazing Recipes With</h2>
                     <div class="animation-text">
-                        <div class="animation-text1">Communities</div>
-                        <div class="animation-text2">Cooks</div>
                         <div class="animation-text3">Culinaries</div>
+                        <div class="animation-text2">Cooks</div>
+                        <div class="animation-text1">Communities</div>
 
                     </div>
                    

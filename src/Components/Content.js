@@ -11,12 +11,15 @@ import { useAuth0 } from "@auth0/auth0-react";
 export function Content() {
 
     const [data, setdata] = useState([]);
-    const { user } = useAuth0();
-
+    const { user , getIdTokenClaims} = useAuth0();
 
     useEffect(() => {
-        fetch("http://localhost:3300/recipes").then((res) => res.json()).then((res) => setdata(res))
+        fetch("http://localhost:3300/posts").then((res) => res.json()).then((res) => setdata(res))
+        
     })
+
+
+
 
 
 
@@ -55,19 +58,24 @@ export function Content() {
                         </div>
 
                     </div>  */}
-                <div className="background"></div>
 
                 <div class="mb-3 mt-5 mx-auto card content" >
                     <div class="row">
                         <div class="col-md-5">
                             <div class="card-body">
-                                <img class="float-left mr-3" src={user.picture} style={{ width: "30px", height: "30px", borderRadius: "20px" }} />
-                                <h3 class=" float-left" style={{ fontSize: "20px", display: 'flex' }}>{user.name}</h3>
+                             {/* <img class="float-left mr-3" src={userclaim.picture} style={{ width: "30px", height: "30px", borderRadius: "20px" }} />
+                                <h3 class=" float-left" style={{ fontSize: "20px", display: 'flex' }}>{userclaim.name}</h3>  */}
+                                <div>
+                                    <h1>{item.UserName}</h1>
+                                    <h3>{item.RecipeName}</h3>
+                                    <p>{item.RecipeProcess}</p>
+                                </div>
                             </div>
                         </div>
                         <div class="recipecontent col-6">
                             <img src={item.RecipeImage} class=" img-fluid " alt="..." />
                         </div>
+
 
 
                     </div>

@@ -43,8 +43,8 @@
   display: flex;
   width: 35vh;
   height: 90vh;
-  margin-left: 9%;
-  border-radius: 10px;
+
+  
 }
 
 
@@ -128,8 +128,13 @@ ul.sidebar-list li {
   font-size: 20px;
   margin-bottom: 30px;
   cursor: pointer;
-
-  
+}
+.profilemenu{
+  position: fixed;
+  top: 16%;
+  left: 5%;
+  font-size: 13px;
+  color: rgb(152, 151, 151);
 }
 
 

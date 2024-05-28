@@ -155,9 +155,9 @@ code {
   width: 100%;
 }
 
-.animation-text1 {
-  background: rgb(24, 63, 109);
-  animation: animate 5s linear infinite;
+.animation-text3 {
+  background: rgb(88, 2, 88);
+  animation: animate 6s linear infinite;
   border-radius: 10px;
   width: 100%;
   font-size: 50px;
@@ -170,8 +170,8 @@ code {
   font-size: 50px;
 }
 
-.animation-text3 {
-  background: rgb(88, 2, 88);
+.animation-text1 {
+  background: rgb(24, 63, 109);
   border-radius: 10px;
   width: 100%;
   font-size: 50px;
