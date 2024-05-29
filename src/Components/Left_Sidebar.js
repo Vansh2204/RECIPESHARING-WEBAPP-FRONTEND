@@ -3,7 +3,7 @@ import { NavLink } from 'react-router-dom';
 import { Link, Outlet } from "react-router-dom";
 import { useAuth0 } from "@auth0/auth0-react";
 import { useNavigate } from "react-router-dom";
-import { faSearch } from "@fortawesome/free-solid-svg-icons";
+import { faAsterisk, faBahai, faSearch, faSpinner } from "@fortawesome/free-solid-svg-icons";
 import { faUser } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
@@ -16,7 +16,7 @@ export function Left_Sidebar() {
         return (
             <>
                
-                <div><h3 style={{marginLeft:"45%",marginTop:"20%"}}>Loading...</h3></div>
+                <div><FontAwesomeIcon class="loader" icon={faBahai}/></div>
             </>
         )
 

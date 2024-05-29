@@ -99,6 +99,23 @@
   column-gap: 25px;
 }
 
+.loader{
+  height: 40px;
+  position: absolute;
+  top: 45%;
+  left: 50%;
+  animation: loader 1s infinite linear;
+}
+@keyframes loader {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}
+
 ul.sidebar-list{
   list-style: none;
   margin-top: 10px;
@@ -138,7 +155,16 @@ ul.sidebar-list li {
   font-size: 13px;
   color: rgb(152, 151, 151);
 }
-
+.editprofilebutton{
+position: fixed;
+top: 17%;
+left: 13%;
+font-size: 14px;
+color: rgb(0, 0, 0);
+cursor: pointer;
+border: none;
+background-color: transparent;
+}
 
 
 

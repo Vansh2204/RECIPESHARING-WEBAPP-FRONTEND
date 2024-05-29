@@ -12,11 +12,25 @@ export function Content() {
 
     const [data, setdata] = useState([]);
     const { user, getIdTokenClaims } = useAuth0();
+    const [like,setLike] = useState(0);
+    const [isLiked,setIsLiked] = useState(false) 
 
     useEffect(() => {
         fetch("http://localhost:3300/posts").then((res) => res.json()).then((res) => setdata(res))
 
     })
+
+   
+    function savepost(){
+        console.log('Post saved')
+    }
+
+    function likebutton(){
+    setLike(isLiked ? like-1 : like+1)
+    setIsLiked(!isLiked)
+    console.log(like)
+
+    }
 
 
 
@@ -91,10 +105,9 @@ export function Content() {
                     </div>
                     <div class="card-footer" style={{position:"absolute",bottom:"0",width:'100%'}}>
                         <div class="row">
-                            <FontAwesomeIcon icon={faThumbsUp} style={{marginLeft:"3%",height:"22px"}}/>
-                            <FontAwesomeIcon icon={faComment} style={{marginLeft:"3%",height:"22px"}}/>
-                            <FontAwesomeIcon icon={faBookmark} style={{marginLeft:"3%",height:"22px",position:"absolute",right:"20"}}/>
-
+                            <FontAwesomeIcon class="btn" icon={faThumbsUp} onClick={likebutton} style={{marginLeft:"3%",height:"35px",color:isLiked?'orange':'grey'}}/>{isLiked?'':''}
+                            <FontAwesomeIcon class="btn" icon={faComment} style={{marginLeft:"3%",height:"35px"}}/>
+                            <FontAwesomeIcon class="btn" icon={faBookmark} onClick={savepost} style={{marginLeft:"3%",height:"35px",position:"absolute",right:"20",color:'grey'}}/>
 
                         </div>
 
