@@ -16,6 +16,8 @@ import { Header } from './Components/Header';
 import { Categories } from './Components/Categories';
 import { Postbutton } from './Components/Postbutton';
 import { Navbar } from './Components/Navbar';
+import { Offcanvas } from './Components/Offcanvas';
+import { Settings } from './Components/Settings';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 
@@ -43,11 +45,12 @@ root.render(
             <Route path='/recipes' element={<Postbutton />}>
               <Route path='/recipes' element={<Content />}></Route>
             </Route>
-            <Route path='/recipe/:id' element={<Description />}></Route>
-          </Route>
+            </Route>
           </Route>
           <Route path='/profile' element={<Profile />}></Route>
           <Route path='/categories' element={<Categories />}></Route>
+          <Route path='/settings' element={<Settings/>}></Route>
+
         </Routes>
         {/* </Left_Sidebar> */}
       </BrowserRouter>

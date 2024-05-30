@@ -41,10 +41,16 @@
 .container-sidebar {
   position: absolute;
   display: flex;
-  width: 35vh;
+  width: 45vh;
   height: 90vh;
 
   
+}
+.container-rightsidebar{
+  display: flex;
+  width: 50vh;
+  height: 90vh;
+
 }
 
 
@@ -76,8 +82,8 @@
 }
 
 .content{
-  width: 100vh;
-  margin-left: 20%;
+  width: 80vh;
+  margin-left: 25%;
   height: 50vh;
   border-radius: 10px;
   top: 10px;

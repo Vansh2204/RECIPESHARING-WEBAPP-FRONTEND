@@ -18,6 +18,8 @@ code {
   border-radius: 60px;
 }
 
+
+
 .background {
   /* background-color:#F0E68C; */
   background-image: url(bg3.jpg);
@@ -251,7 +253,7 @@ code {
 .postbutton {
   position: fixed;
   bottom: 2%;
-  right: 22%;
+  right: 30%;
   height: 7%;
   width: 9%;
   color: rgb(163, 100, 44);
