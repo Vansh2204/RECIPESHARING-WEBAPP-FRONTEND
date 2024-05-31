@@ -38,14 +38,7 @@
   }
 }
 
-.container-sidebar {
-  position: absolute;
-  display: flex;
-  width: 45vh;
-  height: 90vh;
 
-  
-}
 .container-rightsidebar{
   display: flex;
   width: 50vh;
@@ -83,10 +76,10 @@
 
 .content{
   width: 80vh;
-  margin-left: 25%;
+  margin-left: 30%;
   height: 50vh;
   border-radius: 10px;
-  top: 10px;
+  margin-top: 2%;
 }
 
 
@@ -105,13 +98,7 @@
   column-gap: 25px;
 }
 
-.loader{
-  height: 40px;
-  position: absolute;
-  top: 45%;
-  left: 50%;
-  animation: loader 1s infinite linear;
-}
+
 @keyframes loader {
   from {
     transform: rotate(0deg);
@@ -140,27 +127,7 @@ ul.sidebar-list li {
   flex-direction: column;
   cursor:pointer;
 }
-.menuitem{
-  width: 100%;
-  top: 20%;
-  display: flex;
-  position: absolute;
-  float: left;
-  flex-direction: column;
-  
-}
-.menus{
-  font-size: 20px;
-  margin-bottom: 30px;
-  cursor: pointer;
-}
-.profilemenu{
-  position: fixed;
-  top: 16%;
-  left: 5%;
-  font-size: 13px;
-  color: rgb(152, 151, 151);
-}
+
 .editprofilebutton{
 position: fixed;
 top: 17%;

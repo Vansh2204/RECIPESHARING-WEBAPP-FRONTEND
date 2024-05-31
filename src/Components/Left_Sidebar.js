@@ -7,6 +7,7 @@ import { faAsterisk, faBahai, faSearch, faSpinner, faSquare } from "@fortawesome
 import { faUser } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { Right_Sidebar } from "./Right_Sidebar";
+import './Styling/Left_Sidebar.css';
 
 export function Left_Sidebar() {
 

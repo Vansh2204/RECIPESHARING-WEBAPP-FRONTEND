@@ -83,3 +83,35 @@ a:hover,a:focus{
     color: #305275;
     line-height: 28px;
 }
+.ul .li{
+    text-decoration: none;
+}
+
+.items {
+    float: left;
+    text-decoration: none;
+    font-size: 20px;
+    
+}
+
+.picture{
+    float: right;
+    margin-left: 8%;
+    top: 5%;
+}
+.useritems{
+    margin-left: 25%;
+}
+.usernickname{
+    margin-left: 16%;
+
+}
+
+
+.loader{
+    height: 40px;
+    position: absolute;
+    top: 45%;
+    left: 50%;
+    animation: loader 1s infinite linear;
+  }

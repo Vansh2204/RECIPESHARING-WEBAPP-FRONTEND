@@ -7,7 +7,7 @@ import { faPlateWheat, faUtensilSpoon, faUtensils } from "@fortawesome/free-soli
 
 export function Navbar() {
 
-    const {isAuthenticated,loginWithRedirect,user} = useAuth0();
+    const {isAuthenticated,loginWithRedirect,user,logout} = useAuth0();
     const navigate = useNavigate();
 
     return (
@@ -19,7 +19,7 @@ export function Navbar() {
                         <FontAwesomeIcon icon={faUtensils} style={{color:"black",height:"30px"}}/>
                     </a>
                     {isAuthenticated ? (
-                            navigate('/recipes')) && console.log(user) : (<button class="loginbutton btn btn-light border border-secondary mt-2" onClick={async ()=>await loginWithRedirect()} >Sign in</button>)}
+                            navigate('/recipes')): (<button class="loginbutton btn btn-light border border-secondary mt-2" onClick={async ()=>await loginWithRedirect()} >Sign in</button>)}
                     
                 </div>
             </nav>
