@@ -1,0 +1,70 @@
+.content {
+    width: 80vh;
+    margin-left: 30%;
+    height: 50vh;
+    border-radius: 10px;
+    margin-top: 2%;
+}
+
+.recipecontent {
+    display: flex;
+    float: left;
+    height: 50vh;
+    font-family: 'Arial', sans-serif;
+    font-size: 2.2em;
+    font-weight: bold;
+    color: #3d3d3d;
+    text-align: center;
+    text-transform: capitalize;
+    text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.1);
+}
+.morebutton{
+    float: left;
+    margin-left: 1%;
+
+}
+.recipeimage{
+    width: 100%; 
+    max-width: 80vh; 
+    height: auto; 
+    display: block; 
+    margin: 0 auto; 
+    border-radius: 8px; 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+.recipemodal{
+    position: fixed;
+    inset: 0;
+    opacity: 50;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    place-items: center;
+    z-index: 1;
+    width: 100%;
+    height: 100%;
+    background-color: #3d3d3d;
+    opacity: 70%;
+}
+.close {
+    height: 6vh;
+    width: 6vh;
+    float: inline-end;
+    color: red;
+  
+  }
+
+  .commentmodal{
+    position: fixed;
+    inset: 0;
+    opacity: 50;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    place-items: center;
+    z-index: 1;
+    width: 100%;
+    height: 100%;
+    background-color: #3d3d3d;
+    opacity: 70%;
+}

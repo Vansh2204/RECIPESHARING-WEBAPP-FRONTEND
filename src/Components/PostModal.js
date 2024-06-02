@@ -75,7 +75,7 @@ export function PostModal({ props }) {
 
     return (
         <>
-            <div class="postmodal bg-black">
+            <div class="postmodal ">
                 <div>
                     <FontAwesomeIcon onClick={props} class="closemodal btn" icon={faCircleXmark} />
                     <div class="card " style={{ borderRadius: "20px" }}>

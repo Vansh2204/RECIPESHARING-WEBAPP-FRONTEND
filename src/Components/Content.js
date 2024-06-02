@@ -2,9 +2,12 @@ import React, { useEffect, useState } from "react"
 import { Left_Sidebar } from './Left_Sidebar';
 import { Right_Sidebar } from "./Right_Sidebar";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faBookBookmark, faBookmark, faComment, faSave, faThumbsUp } from '@fortawesome/free-solid-svg-icons';
-import { Link } from "react-router-dom";
+import { faBookBookmark, faBookmark, faComment, faCommentDots, faSave, faThumbsUp } from '@fortawesome/free-solid-svg-icons';
+import { Link, useNavigate } from "react-router-dom";
 import { useAuth0 } from "@auth0/auth0-react";
+import './Styling/Content.css';
+import { RecipeModal } from "./RecipeModal";
+import { CommentModal } from "./CommentModal";
 
 
 // import { Right_Sidebar } from './Components/Right_Sidebar';
@@ -12,14 +15,16 @@ export function Content() {
 
     const [data, setdata] = useState([]);
     const { user, getIdTokenClaims } = useAuth0();
-    const [like, setLike] = useState(0);
-    const [isLiked, setIsLiked] = useState(false)
+    const [modal,showmodal] = useState(false);
+    const [commentmodal,showcommentmodal] = useState(false);
+    const navigate = useNavigate();
 
     useEffect(() => {
         fetch("http://localhost:3300/posts").then((res) => res.json()).then((res) => setdata(res))
 
     }, [])
 
+  
 
 
 
@@ -81,23 +86,26 @@ export function Content() {
                 </div> */}
 
                 <div class="card content">
-                    <div class="card-header">
+                    <div class="card-header" style={{backgroundColor:'white'}}>
                         <img class="float-left mr-3" src={item.userinfo?.picture} style={{ width: "20px", height: "20px", borderRadius: "20px" }} />
                         <h3 class=" float-left" style={{ fontSize: "15px", display: 'flex' }}>{item.userinfo?.username}</h3>
                     </div>
-                    <div class="recipecontent">
-                        <h4>{item.RecipeName}</h4>
-                        
+                    <div class="col">
+                        <p class="recipecontent mb-5">{item.RecipeName}</p>
+                       <Link to={'../recipe/' + item._id}> <a class="morebutton" style={{position:'absolute',top:'12%',left:'2%',color:'grey',cursor:'pointer'}} onClick={()=>showmodal(true) }>More...</a></Link>
+                        {modal && <RecipeModal props={()=>showmodal(false)}/>}
+
+                        <img class="recipeimage" src={item.RecipeImage}/>
+
                     </div>
                     <div class="col">
-                      
-                        {/* <Link to={'../recipe/' + item._id}><a class="" style={{position:'absolute',top:'22%',left:'2%',color:'grey',cursor:'pointer'}}>More...</a></Link> */}
                     </div>
-                    <div class="card-footer" style={{ position: "absolute", bottom: "0", width: '100%' }}>
+                    <div class="card-footer" style={{ position: "absolute", bottom: "0", width: '100%' ,backgroundColor:'white'}}>
                         <div class="row">
-                            <FontAwesomeIcon class="btn" icon={faThumbsUp} style={{ marginLeft: "3%", height: "35px", color: isLiked ? 'orange' : 'grey' }} />{isLiked ? '' : ''}
-                            <FontAwesomeIcon class="btn" icon={faComment} style={{ marginLeft: "3%", height: "35px" }} />
-                            <FontAwesomeIcon class="btn" icon={faBookmark} style={{ marginLeft: "3%", height: "35px", position: "absolute", right: "20", color: 'grey' }} />
+                            {/* <FontAwesomeIcon class="btn" icon={faThumbsUp} style={{ marginLeft: "3%", height: "35px", color: isLiked ? 'orange' : 'grey' }} />{isLiked ? '' : ''} */}
+                            <FontAwesomeIcon class="btn" icon={faCommentDots} style={{ marginLeft: "3%", height: "30px" ,color:'grey',cursor:'pointer'}} onClick={()=>showcommentmodal(true)}/>
+                            {commentmodal && <CommentModal props={()=>showcommentmodal(false)}/>}
+                            <FontAwesomeIcon class="btn" icon={faBookmark} style={{ marginLeft: "3%", height: "30px", position: "absolute", right: "20", color: 'grey' }} />
 
                         </div>
 

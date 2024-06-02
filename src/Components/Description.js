@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import { faStar } from '@fortawesome/free-solid-svg-icons';
+import { Left_Sidebar } from "./Left_Sidebar";
 export function Description() {
 
     let params = useParams();
@@ -8,13 +9,14 @@ export function Description() {
     const [rate, setrate] = useState(null);
 
     useEffect(() => {
-        fetch("http://localhost:3300/recipes" + "/" + params.id, { method: "GET" })
+        fetch("http://localhost:3300/posts" + "/" + params.id, { method: "GET" })
             .then((res) => { return res.json(); })
             .then((res) => { setdata(res) })
     }, []);
 
     return (
         <>
+        
             <div class="col">
                 <div class="postbody">
                     <div class="card-body">

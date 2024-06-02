@@ -253,7 +253,7 @@ code {
 .postbutton {
   position: fixed;
   bottom: 2%;
-  right: 30%;
+  right: 20%;
   height: 7%;
   width: 9%;
   color: rgb(163, 100, 44);
@@ -263,22 +263,26 @@ code {
 .postmodal {
   position: fixed;
   inset: 0;
-  opacity: 30;
+  opacity: 50;
   display: flex;
   justify-content: center;
   align-items: center;
+  place-items: center;
   z-index: 1;
-  backdrop-filter: blur(10px);
   width: 100%;
   height: 100%;
+  background-color: #303030;
+  opacity: 95%;
 
 
 }
 
 .closemodal {
-  height: 7vh;
-  width: 7vh;
+  height: 6vh;
+  width: 6vh;
   float: inline-end;
+  color: red;
+  
 
 }
 

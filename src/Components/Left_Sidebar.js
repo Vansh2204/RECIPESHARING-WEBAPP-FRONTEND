@@ -18,7 +18,10 @@ export function Left_Sidebar() {
         return (
             <>
 
-                <div><FontAwesomeIcon class="loader" icon={faBahai} /></div>
+                <div class="d-flex justify-content-center" style={{marginTop:'17%',color:'darkblue'}}>
+                    <div class="spinner-border" role="status">
+                    </div>
+                </div>
             </>
         )
 

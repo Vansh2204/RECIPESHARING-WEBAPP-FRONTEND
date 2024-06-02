@@ -18,6 +18,8 @@ import { Postbutton } from './Components/Postbutton';
 import { Navbar } from './Components/Navbar';
 import { Offcanvas } from './Components/Offcanvas';
 import { Settings } from './Components/Settings';
+import { RecipeModal } from './Components/RecipeModal';
+import { PostModal } from './Components/PostModal';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 
@@ -50,6 +52,7 @@ root.render(
           <Route path='/profile' element={<Profile />}></Route>
           <Route path='/categories' element={<Categories />}></Route>
           <Route path='/settings' element={<Settings/>}></Route>
+          <Route path='/recipe/:id' element={<PostModal/>}></Route>
 
         </Routes>
         {/* </Left_Sidebar> */}
