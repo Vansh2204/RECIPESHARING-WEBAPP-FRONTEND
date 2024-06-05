@@ -4,7 +4,7 @@
     width: 35vh;
     height: 90vh;
     margin-left: 10%;
-    margin-top: 2%;
+    
 
 
 }
@@ -27,10 +27,15 @@
 
 .profilemenu {
     position: fixed;
-    top: 20%;
+    top: 16%;
     left: 15%;
     font-size: 13px;
     color: rgb(152, 151, 151);
 }
+.postbutton{
+    width: 80%;
+    border-radius: 20px;
+    color: white;
+    font-weight: bold;
+}
 
-  

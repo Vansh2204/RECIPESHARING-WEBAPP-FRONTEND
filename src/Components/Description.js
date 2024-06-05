@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import { faStar } from '@fortawesome/free-solid-svg-icons';
 import { Left_Sidebar } from "./Left_Sidebar";
+import { Navbar } from "./Navbar";
 export function Description() {
 
     let params = useParams();
@@ -16,8 +17,7 @@ export function Description() {
 
     return (
         <>
-        
-            <div class="col">
+             <div class="col">
                 <div class="postbody">
                     <div class="card-body">
                         <h2 class=" ">{data.RecipeName}</h2>
@@ -33,7 +33,8 @@ export function Description() {
             <div class="elements" style={{ borderRadius: 20 }}>
                 <h3>Process</h3>
                 <p style={{ whiteSpace: "pre-wrap" }}>{data.RecipeProcess}</p>
-            </div>
+            </div> 
+           
 
         </>
     )

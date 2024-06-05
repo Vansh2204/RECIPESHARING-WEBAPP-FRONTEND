@@ -14,8 +14,10 @@ import { CommentModal } from "./CommentModal";
 export function Content() {
 
     const [data, setdata] = useState([]);
+
     const { user, getIdTokenClaims } = useAuth0();
     const [modal,showmodal] = useState(false);
+    const [itemId, setItemId] = useState(null);
     const [commentmodal,showcommentmodal] = useState(false);
     const navigate = useNavigate();
 
@@ -23,6 +25,11 @@ export function Content() {
         fetch("http://localhost:3300/posts").then((res) => res.json()).then((res) => setdata(res))
 
     }, [])
+
+    
+
+    
+    
 
   
 
@@ -92,10 +99,11 @@ export function Content() {
                     </div>
                     <div class="col">
                         <p class="recipecontent mb-5">{item.RecipeName}</p>
-                       <Link to={'../recipe/' + item._id}> <a class="morebutton" style={{position:'absolute',top:'12%',left:'2%',color:'grey',cursor:'pointer'}} onClick={()=>showmodal(true) }>More...</a></Link>
-                        {modal && <RecipeModal props={()=>showmodal(false)}/>}
+                  <Link to={'../recipe/' + item._id}>   <a class="morebutton" style={{position:'absolute',top:'12%',left:'2%',color:'grey',cursor:'pointer'}}>More...</a></Link>
+                       {/* {modal && <RecipeModal props={()=>showmodal(false)}/>} */}
 
-                        <img class="recipeimage" src={item.RecipeImage}/>
+                        {/* <img class="recipeimage" src={item.RecipeImage}/> */}
+                        {/* <p>{item.UserComment}</p> */}
 
                     </div>
                     <div class="col">
@@ -103,14 +111,11 @@ export function Content() {
                     <div class="card-footer" style={{ position: "absolute", bottom: "0", width: '100%' ,backgroundColor:'white'}}>
                         <div class="row">
                             {/* <FontAwesomeIcon class="btn" icon={faThumbsUp} style={{ marginLeft: "3%", height: "35px", color: isLiked ? 'orange' : 'grey' }} />{isLiked ? '' : ''} */}
-                            <FontAwesomeIcon class="btn" icon={faCommentDots} style={{ marginLeft: "3%", height: "30px" ,color:'grey',cursor:'pointer'}} onClick={()=>showcommentmodal(true)}/>
-                            {commentmodal && <CommentModal props={()=>showcommentmodal(false)}/>}
+                            <FontAwesomeIcon class="btn" icon={faCommentDots} style={{ marginLeft: "3%", height: "30px" ,color:'grey',cursor:'pointer'}}/>
+                            {/* {commentmodal && <CommentModal props={()=>showcommentmodal(false)}/>} */}
                             <FontAwesomeIcon class="btn" icon={faBookmark} style={{ marginLeft: "3%", height: "30px", position: "absolute", right: "20", color: 'grey' }} />
-
                         </div>
-
                     </div>
-
                 </div>
             </>
         )

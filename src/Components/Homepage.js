@@ -17,14 +17,13 @@ export function Homepage() {
 
     return (
         <>
-            <div className="homepagebackground"></div>
-            <div className="d-flex vh-100 ml-5 align-items-center" style={{ overflow: "auto" }}>
+            <div className="d-flex vh-100 ml-5 align-items-center" >
                 <div className="text-center">
-                    <h1 class="head card-text text-center">Discover and Share <br/>Amazing Recipes With</h1>
+                    <p class="head card-text text-center">Discover and Share amazing</p>
+                    <p class="head " style={{marginTop:'5%'}}>recipes </p>
+                    <p class="subhead">Platform for you to share your flavor among the communities</p>
                     <div class="animation-text">
-                        <div class="animation-text3">Culinaries</div>
-                        <div class="animation-text2">Cooks</div>
-                        <div class="animation-text1">Communities</div>
+                        <div class="animation-text3">Join now </div>
 
                     </div>
                    

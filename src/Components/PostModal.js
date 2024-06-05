@@ -34,7 +34,7 @@ export function PostModal({ props }) {
     const createpost = async () => {
         const claims = await getIdTokenClaims();
         if (!claims) {
-            console.error("Failed !!!!");
+            console.log("Failed !!!!");
             return;
         }
         const userinfo = {
@@ -54,9 +54,7 @@ export function PostModal({ props }) {
         if (response.ok) {
             postsuccess();
 
-        } else {
-            console.log("Failed to Post")
-        }
+        } 
 
     }
 

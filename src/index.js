@@ -20,6 +20,8 @@ import { Offcanvas } from './Components/Offcanvas';
 import { Settings } from './Components/Settings';
 import { RecipeModal } from './Components/RecipeModal';
 import { PostModal } from './Components/PostModal';
+import { Signup } from './Components/Signup';
+import { Login } from './Components/Login';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 
@@ -29,35 +31,27 @@ root.render(
     {/* <Right_Sidebar/>
   <Left_Sidebar/>
   <Content/> */}
-    <Auth0Provider
-      domain="dev-bd8wav35g7x84rej.us.auth0.com"
-      clientId="UFNnS5WvcIVdqXYpqTPlBgsb0eiyvpBH"
-      authorizationParams={{
-        redirect_uri: window.location.origin + '/'
-
-      }}
-
-    >
+    
       <BrowserRouter>
         {/* <Left_Sidebar> */}
         <Routes>
-          <Route path='/' element={<Navbar/>}>
-          <Route path='/' element={<Homepage />}></Route>
+          <Route path='/' element={<Navbar />}>
+            <Route path='/' element={<Homepage />}></Route>
+            <Route path='/signup' element={<Signup/>}/>
+            <Route path='/login' element={<Login/>}/>
+          </Route>
           <Route path='/' element={<Left_Sidebar />}>
-            <Route path='/recipes' element={<Postbutton />}>
-              <Route path='/recipes' element={<Content />}></Route>
-            </Route>
-            </Route>
+            <Route path='/recipes' element={<Content />}></Route>
           </Route>
           <Route path='/profile' element={<Profile />}></Route>
-          <Route path='/categories' element={<Categories />}></Route>
-          <Route path='/settings' element={<Settings/>}></Route>
-          <Route path='/recipe/:id' element={<PostModal/>}></Route>
+          <Route path='/categories' element={<Categories />} />
+          <Route path='/settings' element={<Settings />} />
+          <Route path='/recipe/:id' element={<Description />}></Route>
+
 
         </Routes>
         {/* </Left_Sidebar> */}
       </BrowserRouter>
-    </Auth0Provider>
   </>
 
 );

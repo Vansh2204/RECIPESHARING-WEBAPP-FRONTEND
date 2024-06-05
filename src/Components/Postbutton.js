@@ -1,20 +1,17 @@
 import { faFire, faSquarePlus } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { PostModal } from "./PostModal";
 import { useState } from "react";
 import { Outlet } from "react-router-dom";
 
 
 export function Postbutton() {
 
-    const [showmodal,setshowmodal] = useState(false);
 
 
     return (
         <>
             <div>
-                <FontAwesomeIcon class="postbutton btn" icon={faFire} onClick={()=>setshowmodal(true)} />
-               {showmodal && <PostModal props={()=>setshowmodal(false)}/>}
+                <FontAwesomeIcon class="postbutton btn" icon={faFire} />
             </div>
             <Outlet/>
         </>
