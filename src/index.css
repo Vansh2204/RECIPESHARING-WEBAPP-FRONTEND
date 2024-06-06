@@ -237,9 +237,13 @@ code {
   width: 100%;
   
 }
+.animation-text div:hover{
+  background-color: black;
+  color: white;
+}
 
 .animation-text3 {
-  background: rgb(38, 0, 128);
+  background: rgb(100, 72, 177);
   animation: animate 3s 1;
   border-radius: 10px;
   width: 100%;

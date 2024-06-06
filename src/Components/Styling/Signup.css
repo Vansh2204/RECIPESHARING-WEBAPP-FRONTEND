@@ -3,8 +3,9 @@
     justify-content: center;
     position: fixed;
     left: 35%;
+    font-weight: bolder;
     top: 22%;
-    font-family: Arial, Helvetica, sans-serif;
+    font-family:  sans-serif;
     font-size: 25px;
 }
 .signup-subhead{
@@ -24,7 +25,10 @@
     border-radius: 5px;
     outline: none;
     transition: border-color 0.3s;
-    
+ 
+}
+.un:focus{
+    border: 1px solid black;
 }
 .em{
     left: 35.2%;
@@ -38,6 +42,9 @@
     outline: none;
     transition: border-color 0.3s;
 }
+.em:focus{
+    border: 1px solid black;
+}
 .pass{
     left: 35.2%;
     top: 50%;
@@ -49,6 +56,9 @@
     border-radius: 5px;
     outline: none;
     transition: border-color 0.3s;
+}
+.pass:focus{
+    border: 1px solid black;
 }
 .signup-button{
     top: 59%;
@@ -65,13 +75,11 @@
     top: 67%;  
     font-family: Arial, Helvetica, sans-serif;
     color: grey;
-
 }
 .si{
     left: 47.5%;
     position: fixed;
     top: 67%;
     font-family: Arial, Helvetica, sans-serif;
-
     cursor: pointer;
 }

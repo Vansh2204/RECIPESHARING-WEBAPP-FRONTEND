@@ -15,26 +15,26 @@ export function Left_Sidebar() {
     const [showmodal, setshowmodal] = useState(false);
 
 
-    if (isLoading) {
-        return (
-            <>
+    // if (isLoading) {
+    //     return (
+    //         <>
 
-                <div class="d-flex justify-content-center" style={{ marginTop: '22%', color: 'darkblue' }}>
-                    <div class="spinner-border" role="status">
-                    </div>
-                </div>
-            </>
-        )
+    //             <div class="d-flex justify-content-center" style={{ marginTop: '22%', color: 'darkblue' }}>
+    //                 <div class="spinner-border" role="status">
+    //                 </div>
+    //             </div>
+    //         </>
+    //     )
 
-    }
+    // }
 
     return (
         <>
 
             <div className="card container-sidebar col-6">
                 <div class="row">
-                    <img class="mt-4" src={user.picture} style={{ borderRadius: "30px", height: "30px" }} />
-                    <h2 class="ml-2" style= {{ fontSize: "15px", marginTop: "4vh", display: 'flex' }}>{user.name}</h2>
+                    {/* <img class="mt-4" src={user.picture} style={{ borderRadius: "30px", height: "30px" }} />
+                    <h2 class="ml-2" style= {{ fontSize: "15px", marginTop: "4vh", display: 'flex' }}>{user.name}</h2> */}
                     {console.log(user)}
                 </div>
                 <div class="menuitem">
@@ -46,7 +46,7 @@ export function Left_Sidebar() {
                     <button class="postbutton btn btn-dark" onClick={() => setshowmodal(true)} >Post</button>
                     {showmodal && <PostModal props={() => setshowmodal(false)} />}
                 </div>
-                <button class="logoutbutton btn btn-dark" onClick={() => logout()}>Logout</button>
+                {/* <button class="logoutbutton btn btn-dark" onClick={() => logout()}>Logout</button> */}
 
             </div>
             <Outlet />
