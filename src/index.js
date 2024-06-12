@@ -28,6 +28,14 @@ const root = ReactDOM.createRoot(document.getElementById('root'));
 
 root.render(
   <>
+   <Auth0Provider
+      domain="dev-bd8wav35g7x84rej.us.auth0.com"
+      clientId="UFNnS5WvcIVdqXYpqTPlBgsb0eiyvpBH"
+      authorizationParams={{
+        redirect_uri: window.location.origin 
+      }}
+
+    >
     {/* <Right_Sidebar/>
   <Left_Sidebar/>
   <Content/> */}
@@ -37,8 +45,7 @@ root.render(
         <Routes>
           <Route path='/' element={<Navbar />}>
             <Route path='/' element={<Homepage />}></Route>
-            <Route path='/signup' element={<Signup/>}/>
-            <Route path='/login' element={<Login/>}/>
+          
           </Route>
           <Route path='/' element={<Left_Sidebar />}>
             <Route path='/recipes' element={<Content />}></Route>
@@ -47,11 +54,10 @@ root.render(
           <Route path='/categories' element={<Categories />} />
           <Route path='/settings' element={<Settings />} />
           <Route path='/recipe/:id' element={<Description />}></Route>
-
-
         </Routes>
         {/* </Left_Sidebar> */}
       </BrowserRouter>
+      </Auth0Provider>
   </>
 
 );

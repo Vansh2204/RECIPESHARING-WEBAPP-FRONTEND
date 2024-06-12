@@ -11,9 +11,9 @@ export function RecipeModal({ props }) {
     let params = useParams();
     const [data, setdata] = useState({});
     useEffect(() => {
-        fetch("http://localhost:3300/posts" + "/" + params.id, { method: "GET" })
-            .then((res) => { return res.json(); })
-            .then((res) => { setdata(res) })
+            fetch("http://localhost:3300/posts" + "/" + params.id, { method: "GET" })
+                .then((res) => { return res.json(); })
+                .then((res) => { setdata(res) })
     },[]);
 
     return (

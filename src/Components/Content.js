@@ -99,7 +99,8 @@ export function Content() {
                     </div>
                     <div class="col">
                         <p class="recipecontent mb-5">{item.RecipeName}</p>
-                  <Link to={'../recipe/' + item._id}>   <a class="morebutton" style={{position:'absolute',top:'12%',left:'2%',color:'grey',cursor:'pointer'}}>More...</a></Link>
+                  <Link to={'../recipe/' + item._id}>   <a class="morebutton" style={{position:'absolute',top:'12%',left:'2%',color:'grey',cursor:'pointer'}}><span class="badge rounded-pill text-bg-secondary">View more</span>
+                  </a></Link>
                        {/* {modal && <RecipeModal props={()=>showmodal(false)}/>} */}
 
                         {/* <img class="recipeimage" src={item.RecipeImage}/> */}

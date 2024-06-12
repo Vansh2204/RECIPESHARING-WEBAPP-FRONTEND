@@ -6,10 +6,6 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faAdd, faBahai } from "@fortawesome/free-solid-svg-icons";
 import { useParams } from "react-router-dom";
 
-
-
-
-
 export function Profile() {
 
    const [profilepost,setprofilepost] = useState([]);

@@ -18,9 +18,9 @@ export function Navbar() {
                     <a class="navbar-brand" href="#">
                         <FontAwesomeIcon icon={faUtensils} style={{color:"black",height:"30px"}}/>
                     </a>
-                    {/* {isAuthenticated ? (
-                            navigate('/recipes')): (<button class="loginbutton btn btn-light mt-2" style={{border:'1px solid grey',borderRadius:'5px',fontFamily:'Arial',fontSize:'14px'}} onClick={async ()=>await loginWithRedirect()} >Sign in / Sign up</button>)} */}
-                    <button class="loginbutton btn btn-light mt-2" style={{border:'1px solid grey',borderRadius:'5px',fontFamily:'Arial',fontSize:'14px'}} onClick={()=>navigate('/signup')}>Sign in / Sign up</button>
+                    {isAuthenticated ? (
+                            navigate('/recipes')): (<button class="loginbutton btn btn-light mt-2" style={{border:'1px solid grey',borderRadius:'5px',fontFamily:'Arial',fontSize:'14px'}} onClick={async ()=>await loginWithRedirect()} >Sign in / Sign up</button>)}
+                    {/* <button class="loginbutton btn btn-light mt-2" style={{border:'1px solid grey',borderRadius:'5px',fontFamily:'Arial',fontSize:'14px'}} onClick={()=>navigate('/signup')}>Sign in / Sign up</button> */}
                     
                 </div>
             </nav>
