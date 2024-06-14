@@ -15,7 +15,7 @@ export function Homepage() {
                     <p class="head " style={{marginTop:'5%'}}>recipes </p>
                     <p class="subhead">Platform for you to share your flavor among the communities</p>
                     <div class="animation-text">
-                        <div class="animation-text3 btn" onClick={()=>navigate('/signup')}>Join now </div>
+                        <div class="animation-text3 btn" onClick={()=>loginWithRedirect()}>Join now</div>
 
                     </div>
                    

@@ -281,6 +281,21 @@ code {
 
 
 }
+.commumodal{
+  position: fixed;
+  inset: 0;
+  opacity: 50;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  place-items: center;
+  z-index: 1;
+  width: 100%;
+  height: 100%;
+  background-color: #303030;
+  opacity: 95%;
+
+}
 
 .closemodal {
   height: 6vh;

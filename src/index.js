@@ -22,6 +22,7 @@ import { RecipeModal } from './Components/RecipeModal';
 import { PostModal } from './Components/PostModal';
 import { Signup } from './Components/Signup';
 import { Login } from './Components/Login';
+import { Communities } from './Components/Communities';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 
@@ -54,6 +55,7 @@ root.render(
           <Route path='/profile' element={<Profile />}></Route>
           <Route path='/categories' element={<Categories />} />
           <Route path='/settings' element={<Settings />} />
+          <Route path='/communities/:name' element={<Communities/>}/>
           <Route path='/recipe/:id' element={<Description />}></Route>
 
         </Routes>

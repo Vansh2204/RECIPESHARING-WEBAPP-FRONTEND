@@ -73,6 +73,8 @@ export function Left_Sidebar() {
             <div className="card container-sidebar col-6">
                 <div class="menuitem">
                     <a class="menus"><Link to={'/categories'} style={{ color: "black", textDecoration: "none" }}>Categories</Link></a>
+                    <a class="menus"><Link to={'../communities/'+user.name} style={{ color: "black", textDecoration: "none" }}>Communities</Link></a>
+
                     <a class="menus">Saved Posts</a>
                     <a class="menus"><Link to={'/settings'} style={{ color: "black", textDecoration: "none" }}>Settings</Link></a>
                     <a class="menus">Feedback</a>
@@ -83,7 +85,7 @@ export function Left_Sidebar() {
                     <img class="mt-4" src={user.picture} style={{ borderRadius: "30px", height: "30px" }} />
                     <a href=""><Link to={'/profile'} class="mt-4 ml-2" style={{ display: 'flex', textDecoration: 'none', color: 'black' }}>{user.name}</Link></a>
                 </div> */}
-                <div className="profile-dropdown" style={{ position: 'absolute', top: '55%' }} ref={dropdownRef}>
+                <div className="profile-dropdown" style={{ position: 'absolute', top: '65%' }} ref={dropdownRef}>
                     <a onClick={toggleDropdown} className="profile-button">
                         <div class="row ml-1" >
                             <img class="mt-4" src={user.picture} style={{ borderRadius: "30px", height: "30px" }} />
