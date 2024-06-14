@@ -1,16 +1,16 @@
 .container-sidebar {
     position: absolute;
     display: flex;
-    width: 35vh;
+    width: 40vh;
     height: 90vh;
-    margin-left: 10%;
+    margin-left: 15%;
+    border: 0;
     
-
 }
 
 .menuitem {
     width: 100%;
-    top: 20%;
+    top: 5%;
     display: flex;
     position: absolute;
     float: left;
@@ -19,7 +19,7 @@
 }
 
 .menus {
-    font-size: 20px;
+    font-size: 25px;
     margin-bottom: 30px;
     cursor: pointer;
 }
@@ -38,3 +38,29 @@
     font-weight: bold;
 }
 
+.profile-dropdown {
+    position: relative;
+    display: inline-block;
+  }
+  
+ 
+  
+  
+  .dropdown-menu {
+    display: block;
+    position: absolute;
+    background-color: white;
+    min-width: 100px;
+    border-radius: 5px;
+    z-index: 1;
+  }
+  
+  .dropdown-item {
+    padding: 10px;
+    cursor: pointer;
+  }
+  
+  .dropdown-item:hover {
+    background-color: #f1f1f1;
+  }
+  

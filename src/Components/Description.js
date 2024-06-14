@@ -17,7 +17,7 @@ export function Description() {
 
     return (
         <>
-             <div class="col">
+            <div class="col">
                 <div class="postbody">
                     <div class="card-body">
                         <h2 class=" ">{data.RecipeName}</h2>
@@ -29,12 +29,16 @@ export function Description() {
             </div>
             <div class="elements mt-5" style={{ borderRadius: 20 }}>
                 <h3>Ingredients</h3>
+                <ul>
+                    <li>{data.RecipeIngredients}</li>
+                </ul>
             </div>
-            <div class="elements" style={{ borderRadius: 20 }}>
+            <div class="elements ml-5" style={{ borderRadius: 20 }}>
                 <h3>Process</h3>
+               
                 <p style={{ whiteSpace: "pre-wrap" }}>{data.RecipeProcess}</p>
-            </div> 
-           
+            </div>
+
 
         </>
     )

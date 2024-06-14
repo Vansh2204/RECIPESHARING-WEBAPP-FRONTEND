@@ -45,15 +45,17 @@ root.render(
         <Routes>
           <Route path='/' element={<Navbar />}>
             <Route path='/' element={<Homepage />}></Route>
-          
-          </Route>
+            </Route>
+
           <Route path='/' element={<Left_Sidebar />}>
+          
             <Route path='/recipes' element={<Content />}></Route>
           </Route>
           <Route path='/profile' element={<Profile />}></Route>
           <Route path='/categories' element={<Categories />} />
           <Route path='/settings' element={<Settings />} />
           <Route path='/recipe/:id' element={<Description />}></Route>
+
         </Routes>
         {/* </Left_Sidebar> */}
       </BrowserRouter>

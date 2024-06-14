@@ -93,22 +93,16 @@ export function Content() {
                 </div> */}
 
                 <div class="card content">
-                    <div class="card-header" style={{backgroundColor:'white'}}>
-                        <img class="float-left mr-3" src={item.userinfo?.picture} style={{ width: "20px", height: "20px", borderRadius: "20px" }} />
-                        <h3 class=" float-left" style={{ fontSize: "15px", display: 'flex' }}>{item.userinfo?.username}</h3>
-                    </div>
                     <div class="col">
                         <p class="recipecontent mb-5">{item.RecipeName}</p>
-                  <Link to={'../recipe/' + item._id}>   <a class="morebutton" style={{position:'absolute',top:'12%',left:'2%',color:'grey',cursor:'pointer'}}><span class="badge rounded-pill text-bg-secondary">View more</span>
-                  </a></Link>
-                       {/* {modal && <RecipeModal props={()=>showmodal(false)}/>} */}
-
-                        {/* <img class="recipeimage" src={item.RecipeImage}/> */}
-                        {/* <p>{item.UserComment}</p> */}
-
+                
                     </div>
-                    <div class="col">
+                    <div class="row" style={{position:'absolute',top:'65%',left:'5%'}}>
+                    <img class="float-left mr-3" src={item.userinfo?.picture} style={{ width: "20px", height: "20px", borderRadius: "20px" }} />
+                    <h3 class=" float-left" style={{ fontSize: "15px", display: 'flex' }}>{item.userinfo?.username}</h3>
                     </div>
+                    <Link to={'../recipe/' + item._id}>   <a class="morebutton" style={{position:'absolute',top:'65%',left:'80%',color:'grey',cursor:'pointer'}}><span class="badge rounded-pill text-light" style={{backgroundColor:'green'}}>View more</span>
+                    </a></Link>
                     <div class="card-footer" style={{ position: "absolute", bottom: "0", width: '100%' ,backgroundColor:'white'}}>
                         <div class="row">
                             {/* <FontAwesomeIcon class="btn" icon={faThumbsUp} style={{ marginLeft: "3%", height: "35px", color: isLiked ? 'orange' : 'grey' }} />{isLiked ? '' : ''} */}
